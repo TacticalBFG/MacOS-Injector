@@ -1,13 +1,4 @@
-//
-//  main.cpp
-//  injector
-//
-//  Created by Owner on 7/19/20.
-//  Copyright © 2020 Marco Villasuso. All rights reserved.
-//
-
 #include <iostream>
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
