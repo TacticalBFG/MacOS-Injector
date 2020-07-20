@@ -4,7 +4,7 @@
 
 path=$(cd "$(dirname "$0")"; pwd -P)    # Get absolute path of Helicity's folder
 cd $path                                # CD to it so the relative paths work right (injector gives its own application path)
-sudo ./lib2proc $1 ./Debug/libi.dylib   # Inject
+sudo ./lib2proc $1 ./Helicity_MacOS.dylib   # Inject
 # Because this is ran as sudo (super-user do); it'll ask for an admin password;
 
 # Source avaliable at https://github.com/TacticalBFG/MacOS-Injector
