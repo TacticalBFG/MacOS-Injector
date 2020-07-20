@@ -46,14 +46,13 @@ int main() {
     if ( pret <= 0 ) {
         std::cerr << "Issue with proc_pidpath: " << strerror(errno) << std::endl;
         return 1;
-    } else {
-        std::string spath(pathbuff);
-        spath = spath.substr(0,spath.find_last_of('/'))+"/Bin/";
-
-        std::string cmd = spath + "./ShellInject.sh " + std::to_string(rbxProc);
-        system(cmd.c_str()); /* Finish injection with shell script */
-        
-        printf("\r\n\r\n\r\n--- Injected! ---\r\n");
     }
+    std::string spath(pathbuff);
+    spath = spath.substr(0,spath.find_last_of('/'))+"/Bin/";
+
+    std::string cmd = spath + "./ShellInject.sh " + std::to_string(rbxProc);
+    system(cmd.c_str()); /* Finish injection with shell script */
+        
+    printf("\r\n\r\n\r\n--- Injected! ---\r\n");
     return 0;
 }
